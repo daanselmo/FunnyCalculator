@@ -5,13 +5,38 @@
     list-style: none;
 }
 
+.RoundedButton {
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+
+.RoundedButton:hover {
+    background: #C0C0C0;
+    color: #FF7F50;  
+}
+
+.EspecialButtons {
+    background: #d3d3d3;
+    color: black;
+}
+
+.OperationButtons {
+   background: #FF7F50; 
+}
+
+.NumberButtons {
+    background: #696969;
+}
+
+
 .Container {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 1em;
 }
 
 .Container div {
-    background: #d3d3d3 ;
+  /*  background: #d3d3d3 ;*/
     padding: 1em;
 }
