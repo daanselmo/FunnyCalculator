@@ -1,4 +1,6 @@
-export const butt: NodeListOf<Element> = document.querySelectorAll('.RoundedButton')!
+export const soma = function(a: number, b: number): number {
+    return a + b;
+}
 
 
 
