@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element positions</title>
+    <style type="text/css">
+           *, *:before, *:after
+           {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                list-style: none;
+
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+           }
+
+           #GeneralWrapper
+           {
+               margin-top: 4em;
+                max-width: 20%;
+                border: cadetblue 1px solid;
+                margin-left: auto;
+                margin-right: auto;
+                height: 500px;
+           }
+
+           #Display
+           {
+               width: 100%;
+               height: 70px;
+               border: cadetblue 1px solid;
+               position: relative;
+               margin-bottom: 0.05em;
+           }
+
+           #Display > p
+           {
+                position:absolute;
+                bottom: 0;
+                right: 0;
+           }
+           
+           .ButtonContainer
+           {
+               display: grid;
+               grid-template-columns: auto auto auto auto;              
+               gap: 0.3em;
+           }
+
+           .StdButtons
+           {
+               margin: 0.2em;
+               border: dimgray 1px solid;
+               height: 45px;
+               text-align: center; 
+               padding: 0.8em;              
+           }
+
+           .Lvl1InContButtons
+           {
+               display: grid; 
+               grid-template-columns: 1fr 1fr 1fr 1fr;
+               grid-template-rows: 1fr 1fr 1fr 2fr;
+           }
+
+           .Lvl2InContButtons
+           {
+               display: grid; 
+               grid-column: 1/2;
+           }
+
+           .ZeroButton
+           {
+               grid-column: 1/3;
+           }
+
+           .EqualButton
+           {
+               grid-row: 5/7;
+           }
+
+           .Item1
+            {
+               grid-row: 1 / 4;
+            }
+    </style>
+</head>
+<body>
+    <div id="GeneralWrapper">
+        <div class="MainContainerElements">
+            <div id="Display">
+                <p>000000000000</p>
+            </div>
+            
+            <div class="ButtonContainer">
+                 <div class="StdButtons">MC</div>
+                 <div class="StdButtons">MR</div>
+                 <div class="StdButtons">M+</div>
+                 <div class="StdButtons">M-</div>
+
+                 <div class="StdButtons">C</div>
+                 <div class="StdButtons">DEL</div>
+                 <div class="StdButtons">/</div>
+                 <div class="StdButtons">X</div>
+
+                 <div class="StdButtons">7</div>
+                 <div class="StdButtons">8</div>
+                 <div class="StdButtons">9</div>
+                 <div class="StdButtons">-</div>
+
+                 <div class="StdButtons">4</div>
+                 <div class="StdButtons">5</div>
+                 <div class="StdButtons">6</div>
+                 <div class="StdButtons">+</div> 
+                 
+                <div class="StdButtons">1</div>
+                <div class="StdButtons">2</div>
+                <div class="StdButtons">3</div>
+                <div class="StdButtons EqualButton">=</div> 
+                
+                <div class="StdButtons ZeroButton" >0</div>
+                <div class="StdButtons">.</div> 
+            </div>
+            <!--
+            <div class="Lvl1InContButtons">
+                                                        
+            </div>
+            <div class="Lvl2InContButtons"> 
+                               
+            </div>  
+            -->                       
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+          const but = document.querySelectorAll('.StdButtons');
+          const p = document.getElementById('Display').querySelector('p');
+          let count;
+
+          but.forEach(b =>
+          {      
+               count = 0;        
+               b.addEventListener('click', e =>
+               {
+                    e.preventDefault();
+                    //console.log('I was clicked');
+                    //alert('I was clicked');
+
+                    switch (b.innerHTML)
+                    {
+                        case 'MC': { p.innerHTML = ''; break; }
+                        case '+':
+                        {
+                            number1 = +display.innerHTML;
+                            p.innerHTML = '';
+                        }
+                        case '=': p.innerHTML = soma(number1, number1).toString();
+                        default:
+                        {
+                            if (count >= 15)
+                            {
+                                p.innerHTML += '<br>';
+                                count = 0;
+                            }
+                            else
+                            {
+                                p.innerHTML += b.innerHTML;
+                                count++;
+                            }
+                        }
+                     }
+               });             
+          });
+
+
+    </script>
+</body>
+</html>
