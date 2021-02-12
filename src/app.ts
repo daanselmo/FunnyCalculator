@@ -20,7 +20,8 @@ butt.forEach(button => {
             
             case '=': display.innerHTML = soma(number1, number1).toString();            
 
-            default: {
+            default:
+            {
                 if (count >= 31)
                 {
                     display.innerHTML += '<br>';

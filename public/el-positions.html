@@ -47,7 +47,7 @@
            .ButtonContainer
            {
                display: grid;
-               grid-template-columns: auto auto auto auto;              
+               grid-template-columns: 1fr 1fr 1fr 1fr;              
                gap: 0.3em;
            }
 
@@ -58,35 +58,39 @@
                height: 45px;
                text-align: center; 
                padding: 0.8em;              
-           }
-
-           .Lvl1InContButtons
-           {
-               display: grid; 
-               grid-template-columns: 1fr 1fr 1fr 1fr;
-               grid-template-rows: 1fr 1fr 1fr 2fr;
-           }
-
-           .Lvl2InContButtons
-           {
-               display: grid; 
-               grid-column: 1/2;
-           }
+           }         
 
            .ZeroButton
            {
                grid-column: 1/3;
-           }
-
-           .EqualButton
-           {
-               grid-row: 5/7;
-           }
+           }           
 
            .Item1
             {
-               grid-row: 1 / 4;
+               grid-row: 5 / 7;
             }
+
+            .btn1 {
+                grid-column: 1/2;
+                grid-row: 5/6;
+            }
+
+            .btn2 {
+                grid-column: 2/3;
+                grid-row: 5/6; 
+            }
+
+            .btn3 {
+                grid-column: 3/4;
+                grid-row: 5/6;
+            }
+
+            .EqualButton
+           {
+               grid-column: 4/5;
+               grid-row: 5/7;
+           }
+
     </style>
 </head>
 <body>
@@ -117,13 +121,15 @@
                  <div class="StdButtons">6</div>
                  <div class="StdButtons">+</div> 
                  
-                <div class="StdButtons">1</div>
-                <div class="StdButtons">2</div>
-                <div class="StdButtons">3</div>
-                <div class="StdButtons EqualButton">=</div> 
                 
+                <div class="StdButtons btn1">1</div>
+                <div class="StdButtons btn2">2</div>
+                <div class="StdButtons btn3">3</div>
+                <div class="StdButtons EqualButton">=</div> 
+                    
                 <div class="StdButtons ZeroButton" >0</div>
                 <div class="StdButtons">.</div> 
+              
             </div>
             <!--
             <div class="Lvl1InContButtons">
