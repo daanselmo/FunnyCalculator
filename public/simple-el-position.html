@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML positions</title>
+    <style type="text/css">
+        *
+        {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            margin-bottom: 1em;
+        }
+        
+        .Container
+        {
+            display: grid;
+            height: 90vh;
+        
+           grid-template-areas: "Box1 Box1 Box1 Box1"
+                                "Box2 Box3 Box3 Box4"
+                                "Box5 Box5 Box5 Box4";
+
+            grid-template-rows: 1fr 3fr 1.5fr;
+           
+            gap: 0.3em;                       
+        }
+
+        .Box1
+        {
+           background-color: lightskyblue;
+           grid-area: Box1;         
+        }
+
+        .Box2
+        {
+           background-color: deeppink;
+           grid-area: Box2;          
+        }
+
+        .Box3
+        {
+           background-color: forestgreen;
+           grid-area: Box3;
+        }
+
+        .Box4
+        {
+           background-color: palevioletred;
+           grid-area: Box4;
+        }
+
+        .Box5
+        {
+            background-color: darkorange;
+            grid-area: Box5;
+        }
+
+    </style>
+</head>
+<body>
+      <h1>Simple elements arrangement</h1>
+
+      <div class="Container">
+           <div class="Box1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat.</div>
+           <div class="Box2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat.</div>
+           <div class="Box3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat.</div>
+           <div class="Box4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat.</div>
+           <div class="Box5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, fugiat.</div>
+      </div>
+</body>
+</html>
