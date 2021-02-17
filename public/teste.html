@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style type="text/css">
+
+           .SubContainer
+           {
+               display: grid;
+               grid-template-areas: "btn1 btn2 btn3 EqualButton"
+                                    "ZeroButton ZeroButton pointButton EqualButton";                                    
+           }
+           .StdButtons
+           {
+               margin: 0.2em;
+               border: dimgray 1px solid;
+               /* height: 45px; */
+               text-align: center; 
+               padding: 0.8em;               
+           }  
+
+           .btn1 {
+                grid-area: btn1;
+            }
+
+            .btn2 {
+                grid-area: btn2;
+            }
+
+            .btn3 {
+                grid-area: btn3;
+            }
+
+            .EqualButton  {
+              grid-area: EqualButton;
+           }
+
+           .ZeroButton {
+              grid-area: ZeroButton; 
+           }
+
+            .pointButton {
+               grid-area: pointButton;
+           }           
+    </style>
+</head>
+<body>
+    <div class="SubContainer">
+                <div class="StdButtons btn1">1</div>
+                <div class="StdButtons btn2">2</div>
+                <div class="StdButtons btn3">3</div>
+                <div class="StdButtons EqualButton">=</div>                    
+                <div class="StdButtons ZeroButton">0</div>
+                <div class="StdButtons pointButton">.</div>
+        </div>  
+</body>
+</html>
